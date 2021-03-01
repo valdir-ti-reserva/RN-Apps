@@ -1,13 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
 import React from 'react';
 import {StyleSheet, ScrollView, View} from 'react-native';
 
@@ -15,7 +5,12 @@ const App = () => {
   return (
     <>
       <View style={styles.container}>
-        <ScrollView>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          scrollEnabled={true}
+          // horizontal={true}
+          // showsHorizontalScrollIndicator={false}
+        >
           <View style={styles.box1} />
           <View style={styles.box2} />
           <View style={styles.box3} />
@@ -33,18 +28,22 @@ const styles = StyleSheet.create({
   box1: {
     height: 250,
     backgroundColor: 'green',
+    width: 150,
   },
   box2: {
     height: 250,
     backgroundColor: 'gray',
+    width: 150,
   },
   box3: {
     height: 250,
     backgroundColor: 'blue',
+    width: 150,
   },
   box4: {
     height: 250,
     backgroundColor: 'red',
+    width: 150,
   },
 });
 

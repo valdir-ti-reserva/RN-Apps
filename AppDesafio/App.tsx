@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {StyleSheet, FlatList, View, Text} from 'react-native';
 
+import Pessoa from './src/components/Pessoa';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -21,6 +23,24 @@ class App extends Component {
         {
           id: 3,
           name: 'Lila',
+          idade: 32,
+          email: 'lila@mail.com',
+        },
+        {
+          id: 4,
+          name: 'Lila 2',
+          idade: 32,
+          email: 'lila@mail.com',
+        },
+        {
+          id: 5,
+          name: 'Julia 2',
+          idade: 32,
+          email: 'lila@mail.com',
+        },
+        {
+          id: 6,
+          name: 'Valdir 2',
           idade: 32,
           email: 'lila@mail.com',
         },
@@ -48,18 +68,5 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
-
-class Pessoa extends Component {
-  render() {
-    return (
-      <View>
-        <Text>
-          {this.props.data.id} - {this.props.data.name} -{' '}
-          {this.props.data.idade} - {this.props.data.email}
-        </Text>
-      </View>
-    );
-  }
-}
 
 export default App;

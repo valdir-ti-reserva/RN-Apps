@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View, Text, Switch} from 'react-native';
 
 import Slider from '@react-native-community/slider';
 
@@ -8,6 +8,7 @@ class App extends Component {
     super(props);
     this.state = {
       valor: 24,
+      status: true,
     };
   }
 
@@ -27,8 +28,18 @@ class App extends Component {
             minimumTrackTintColor="#fe0eee"
             maximumTrackTintColor="#e33e32"
           />
-
           <Text style={styles.resp}>{this.state.valor.toFixed(2)}</Text>
+
+          <Text style={styles.title}>App Switch</Text>
+          <Switch
+            value={this.state.status}
+            onValueChange={(value) => this.setState({status: value})}
+            thumbColor="#fe0000"
+          />
+
+          <Text style={styles.resp}>
+            Valor Switch: {this.state.status ? 'Ativo' : 'Inativo'}
+          </Text>
         </View>
       </>
     );
